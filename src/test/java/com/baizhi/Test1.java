@@ -20,6 +20,8 @@ public class Test1 {
         System.out.println("你是沙雕吧");
         System.out.println("我就是沙雕");
     }
-    public void test2(){
+
+    public void test3() {
+
     }
 }
