@@ -46,7 +46,6 @@ public class PersonalController {
                 map.put("errno", "-200");
                 map.put("error_msg", "该手机号已经存在");
             }
-
         }
         return map;
     }
