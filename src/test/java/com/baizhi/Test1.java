@@ -17,5 +17,6 @@ public class Test1 {
     @Test
     public void test1() {
         System.out.println("嘻嘻");
+        System.out.println("你是沙雕吧")
     }
 }
