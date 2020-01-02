@@ -1,5 +1,6 @@
 package com.baizhi.service;
 
+import com.baizhi.annotation.AddCache;
 import com.baizhi.dao.UserDAO;
 import com.baizhi.entity.User;
 import org.apache.ibatis.session.RowBounds;
@@ -21,6 +22,7 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserDAO userDAO;
     @Override
+    @AddCache
     public Map<String, Object> showAll(Integer page, Integer rows) {
         Map<String, Object> map = new HashMap<>();
         User user = new User();

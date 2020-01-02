@@ -1,5 +1,7 @@
 package com.baizhi.service;
 
+import com.baizhi.annotation.AddCache;
+import com.baizhi.annotation.deleteCache;
 import com.baizhi.dao.ArticleDAO;
 import com.baizhi.entity.Article;
 import org.apache.ibatis.session.RowBounds;
@@ -19,6 +21,7 @@ public class ArticleServiceImpl implements ArticleService {
     @Autowired
     private ArticleDAO articleDAO;
 
+    @AddCache
     @Override
     public Map<String, Object> showAllArticle(Integer page, Integer rows) {
         Map<String, Object> map = new HashMap<>();
@@ -59,6 +62,7 @@ public class ArticleServiceImpl implements ArticleService {
         }
     }
 
+    @deleteCache
     @Override
     public void del(Article article) {
         int i = articleDAO.delete(article);

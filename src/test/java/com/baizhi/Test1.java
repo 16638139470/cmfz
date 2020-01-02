@@ -1,7 +1,9 @@
 package com.baizhi;
 
+import com.baizhi.dao.UserDAO;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -14,6 +16,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 @RunWith(SpringRunner.class)
 public class Test1 {
+    @Autowired
+    UserDAO userService;
     @Test
     public void test1() {
         System.out.println("嘻嘻");
@@ -21,7 +25,7 @@ public class Test1 {
         System.out.println("我就是沙雕");
     }
 
+    @Test
     public void test3() {
-
     }
 }
